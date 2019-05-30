@@ -17,13 +17,16 @@ title: Prototype
 email: your-email@example.com
 logo: http://placehold.it/50x50?text=Logo
 profile: https://source.unsplash.com/yCR-IIJg_6A/500x500
-profile-alt: A generic profile image picture.
+profile-alt: A collection of multi-colored pencils.
 description: >- # this means to ignore newlines until "baseurl:"
   A jekyll theme with a hand-drawn look. Based on sketchy by bootswatch.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/prototype" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
 github_username:  
+
+permalink: /:collection/:title
+        
 
 # Build settings
 markdown: kramdown
