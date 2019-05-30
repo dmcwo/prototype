@@ -1,0 +1,34 @@
+<!-- Navigation -->
+<!-- https://startbootstrap.com/snippets/navbar-logo/ -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary static-top fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="{{'/' | relative_url }}">
+        {% if site.logo %}
+        <img class="rounded-circle" src="{{ site.profile }}" width="50" height="50" alt="{% if site.profile-alt %}{{ site.profile-alt }}{% else %}{{ site.title }} profile image{% endif %}"> 
+        {% endif %}
+          {{ site.title }}
+        </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+          <a class="nav-link" href="{{'/' | relative_url }}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{'/about' | relative_url }}">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{'/posts' | relative_url }}">Posts</a>
+        </li>
+          <li>
+              <a class="nav-link" href="{{'/elements' | relative_url }}">Elements</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{'/contact' | relative_url }}">Contact</a>
+        </li>
+     </ul>
+    </div>
+  </div>
+</nav>

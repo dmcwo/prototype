@@ -1,0 +1,64 @@
+---
+layout: default
+---
+
+<!-- top of page image -->
+{% if page.banner-img %}
+<div class="py-5 bg-image-full" style="background-image: url('{{ page.banner-img }}');">
+    <!--<div style="height: 200px;"></div>-->
+    <header class="mb-4" style="margin-top: 6em;">
+  <div class="overlay"></div>
+  <div class="container">
+      <div class="row">
+      <div class="{% if page.wide %}col-xl-10 col-lg-11{% else %}col-lg-8 col-md-10{% endif %} mx-auto">
+        <div class="page-heading">
+            <div class="card border-primary">
+                <p class="card-header">{{ page.date | date: '%B %d, %Y' }}</p>
+                  <div class="card-body">
+                      <h1>{{ page.title}}{% if page.subtitle %}<small> - {{ page.subtitle }}</small>{% endif %}</h1>
+                      {% if page.description %}
+                    <p class="card-text">{{ page.description }}</p>
+                      {% endif %}
+                        <small><span class="float-left">Posted in: {% for category in page.categories %}{% capture cat-url %}categories#{{ category | slugify }}{% endcapture %}<a href="{{ cat-url | absolute_url }}">{{ category }}</a>{% unless forloop.last %} | {% endunless %}{% endfor %}</span><span class="float-right">{% include read_time.html content=page.content %}</span></small> 
+                </div>
+                <!--<div class="card-footer text-muted"><small><span class="float-left">Posted in: {{ page.categories }}</span><span class="float-right">{% include read_time.html content=page.content %}</span></small></div>-->
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</header>
+</div>
+{% endif %}
+
+  <div class="container mt-5">
+      <div class="row">
+          <div class="{% if page.wide %}col-xl-10 col-lg-11{% else %}col-lg-8 col-md-10{% endif %} mx-auto">
+            {{ content }}
+          </div>
+      </div>
+    </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <hr>
+        <div class="clearfix">
+
+          {% if page.previous.url %}
+          <a class="btn btn-primary float-left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}"
+            data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          {% endif %}
+          {% if page.next.url %}
+          <a class="btn btn-primary float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}"
+            data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          {% endif %}
+
+        </div>
+
+      </div>
+    </div>
+  </div>

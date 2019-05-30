@@ -1,0 +1,121 @@
+---
+layout: page
+wide: yes
+title: Posts
+---
+<div class="row">
+<!-- Blog Entries Column -->
+<div class="col-md-8">
+{% for post in paginator.posts %}
+        <!-- Blog Post -->
+        <div class="card mb-4">
+            <p class="card-header">{{ post.date | date: '%B %d, %Y' }}</p>
+            {% if post.banner-img %}
+                <!--<img class="card-img-top rounded-0" src="{{ post.banner-img }}" alt="{{ post.banner-img-alt }}">-->
+            <a href="{{ post.url }}"><img class="img-fluid" src="{{ post.banner-img }}" alt="{{ post.banner-img-alt }}"></a>
+            {% endif %}
+          <div class="card-body">
+              <h2 class="card-title"><a href="{{ post.url }}">{{ post.title }}{% if post.subtitle %}<span class="text-muted"><small> - {{ post.subtitle }}</small></span>{% endif %}</a></h2>
+            <p class="card-text">{{ post.description | strip_html }}</p>
+            <a href="{{ post.url }}" class="btn btn-primary">Read More &rarr;</a>
+          </div>
+          <!--<div class="card-footer text-muted">
+            Posted on {{ post.date }} by
+            <a href="#">{{ post.author }}</a>
+          </div>
+          -->
+        </div>
+{% endfor %}
+
+
+<!-- Pagination -->
+<!-- w/ jekyll plug-in -->
+          
+{% if paginator.total_pages > 1 %}
+          
+<ul class="pagination justify-content-center mb-4">
+
+    {% if paginator.next_page %}
+    <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Older</a></li>
+  {% else %}
+    <li class="page-item disabled"><span class="page-link">&larr; Older</span></li>
+  {% endif %}
+
+  {% if paginator.previous_page %}
+    <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Newer &rarr;</a></li>
+  {% else %}
+    <li class="page-item disabled"><span class="page-link">Newer &rarr;</span></li>
+  {% endif %}
+        <!-- numbers between prev and next -->
+        <!--
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <span class="webjeda">{{ page }}</span>
+    {% elsif page == 1 %}
+      <a href="/">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+-->
+</ul>
+
+{% endif %}
+
+          
+          
+          <hr>
+          
+        <!--  
+          
+        <ul class="pagination justify-content-center mb-4">
+          <li class="page-item">
+            <a class="page-link" href="#">&larr; Older</a>
+          </li>
+          <li class="page-item disabled">
+            <a class="page-link" href="#">Newer &rarr;</a>
+          </li>
+        </ul>
+-->
+    
+</div><!-- End Blog Entries Column -->
+
+
+      <!-- Sidebar Widgets Column -->
+      <div class="col-md-4">
+          
+           <!-- Categories Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Categories 2</h5>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                    {% assign categories_list = site.categories %}
+                    {% if categories_list.first[0] == null %}
+                        {% for category in categories_list %}
+                            {% capture cat-url %}categories#{{ category[0] | downcase | downcase | url_escape | strip | replace: ' ', '-' }}{% endcapture %}
+                            <li><a href="{{ cat-url | absolute_url }}">{{ category | camelcase }} ({{ site.tags[category].size }})</a></li>
+                        {% endfor %}
+                    {% else %}
+                        {% for category in categories_list %}
+                        {% capture cat-url %}categories#{{ category[0] | downcase | downcase | url_escape | strip | replace: ' ', '-' }}{% endcapture %}
+                        <li><a href="{{ cat-url | absolute_url }}">{{ category[0] | camelcase }} ({{ category[1].size }})</a></li>
+                    {% endfor %}
+                {% endif %}
+                {% assign categories_list = nil %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Side Widget</h5>
+          <div class="card-body">
+            You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+          </div>
+          </div>
+</div>
+</div>

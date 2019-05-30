@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<!-- top of page image -->
+{% if page.banner-img %}
+<div class="py-5 bg-image-full" style="background-image: url('{{ page.banner-img }}');">
+    <!--<img class="img-fluid d-block mx-auto" src="http://placehold.it/200x200&text=Logo" alt="Placeholder">-->
+    <div style="height: 200px;"></div>
+</div>
+{% else %}
+    <div style="height: 78px;"></div>
+{% endif %}
+
+<!-- Page Header -->
+
+<header>
+  <div class="overlay"></div>
+  <div class="container">
+      <div class="row">
+      <div class="{% if page.wide %}col-xl-10 col-lg-11{% else %}col-lg-8 col-md-10{% endif %} mx-auto">
+        <div class="page-heading my-4">
+            <div class="card border-primary">
+                  <div class="card-body">
+                      <h1>{{ page.title}}{% if page.subtitle %}<small> - {{ page.subtitle }}</small>{% endif %}</h1>
+                      {% if page.description %}
+                    <p class="card-text">{{ page.description }}</p>
+                      {% endif %}
+                  </div>
+                  <!--<div class="card-footer text-muted">A 2 minute read.</div>-->
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="{% if page.wide %}col-xl-10 col-lg-11{% else %}col-lg-8 col-md-10{% endif %} mx-auto">
+
+      {{ content }}
+
+    </div>
+  </div>
+</div>
