@@ -17,7 +17,7 @@ title: Posts
           <div class="card-body">
               <h2 class="card-title"><a href="{{ post.url | absolute_url }}">{{ post.title }}{% if post.subtitle %}<span class="text-muted"><small> - {{ post.subtitle }}</small></span>{% endif %}</a></h2>
             <p class="card-text">{{ post.description | strip_html }}</p>
-            <a href="{{ post.url }}" class="btn btn-primary">Read More &rarr;</a>
+            <a href="{{ post.url | absolute_url }}" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <!--<div class="card-footer text-muted">
             Posted on {{ post.date }} by
