@@ -13,9 +13,9 @@ layout: default
                     <img class="rounded-circle img-fluid w-25 border border-primary" src="{{ site.profile }}" alt="{% if site.profile-alt %}{{ site.profile-alt }}{% else %}{{ site.title }} profile image{% endif %}">
             {% endif %} 
                 <h1 class="display-4" >{{ site.title }}</h1>
-                <p class="lead">{{ site.description }}</p>
+                <p>{{ site.description }}</p>
                 <hr class="my-4">
-                <p class="lead">
+                <p>
                   <a class="btn btn-primary btn-lg" href="{{'/about' | relative_url }}" role="button">About</a>
                     <a class="btn btn-primary btn-lg" href="{{'/posts' | relative_url }}" role="button">Posts</a>
                 </p>
