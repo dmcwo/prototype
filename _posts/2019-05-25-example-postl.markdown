@@ -4,7 +4,7 @@ title:  "An example post!"
 subtitle: "This is the post subtitle."
 description: "This is a very descriptive sentence or paragraph."
 date:   2019-05-25 21:24:25 -0700
-banner-img: 'https://source.unsplash.com/HN1roKF-DS4/1600x900/'
+banner-img: 'https://source.unsplash.com/YlDP0IkQuxA/1600x900/'
 banner-img-alt: "an example image of a sketch or notebook from unsplash"
 categories: [jekyll]
 ---

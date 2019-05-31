@@ -12,9 +12,14 @@ Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incid
 
 ## Me non paenitet nullum festiviorem
 
-excogitasse ad hoc. Fictum, deserunt mollit anim laborum astutumque! Quae vero auctorem tractata ab fiducia dicuntur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Donec sed odio operae, eu vulputate felis rhoncus.
+<p class="lead">Excogitasse ad hoc. Fictum, deserunt mollit anim laborum astutumque! Quae vero auctorem tractata ab fiducia dicuntur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Donec sed odio operae, eu vulputate felis rhoncus.</p>
 
 Sed haec quis possit intrepidus aestimare tellus. Tu quoque, Brute, fili mi, nihil timor populi, nihil! Inmensae subtilitatis, obscuris et malesuada fames. Hi omnes lingua, institutis, legibus inter se differunt. Qui ipsorum lingua Celtae, nostra Galli appellantur.
+
+<blockquote class="blockquote">
+<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+<footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+</blockquote>
 
 Me non paenitet nullum festiviorem excogitasse ad hoc. Fictum, deserunt mollit anim laborum astutumque! Quae vero auctorem tractata ab fiducia dicuntur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Donec sed odio operae, eu vulputate felis rhoncus.
 
