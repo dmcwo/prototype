@@ -26,7 +26,10 @@ twitter_username:
 github_username: dmcwo/prototype
 
 permalink: /:collection/:title
-        
+
+collections:
+  quotes:
+    output: true
 
 # Build settings
 markdown: kramdown
