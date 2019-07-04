@@ -30,6 +30,7 @@ permalink: /:collection/:title
 collections:
   quotes:
     output: true
+    layout: quote
 
 # Build settings
 markdown: kramdown
