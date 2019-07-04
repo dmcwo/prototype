@@ -1,4 +1,5 @@
 ---
+layout: quote
 title: The Anybodies
 author: N E Bode; Peter Ferguson
 quote: |
